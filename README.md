@@ -13,6 +13,10 @@ Hands-on project for study
 搜索引擎
 bug管理平台等等
 微信小程序开发等等
-Flask开发网站
+Flask开发网站'
 Django开发网站
+蓝桥杯比如Python识别登录验证码
+Python实现简单web服务器
+Python实现文字聊天室
+..
 等练手项目
