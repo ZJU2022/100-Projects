@@ -1,0 +1,54 @@
+1. 请写出Python从0开始的学习路线
+答：根据《PythonDay100》作答
+2. 请写出Python的变量类型，以及不同类型之间如何转换？
+答：Day01_pratice_02.py
+3. 如何用模块管理函数？
+答：Day03_practice_02+函数
+4. Python常用模块+内置函数+函数参数的四种类型（可变参数，关键字参数等等）
+答：Day03_practice_08，07，06
+5. 字符串处理函数与语法糖print(f'{a} * {b} = {a*b}')
+答：Day04_practice_02.py
+6. 常见数据结构，list，tuple，dict，set的切片与内置函数，sort函数设计规则，生成表达式语法
+答：Day04_practice_04
+7. 什么事类？什么事对象？PEP8与驼峰命名法。
+答：Day05_practice_01
+8. Python中，属性和方法的访问权限只有两种，公开的和私有的。如何保证属性是私有的？
+答：Day05_practice_02
+9. 面向对象进阶，@property修饰器,getter（访问器）和setter（修改器）.请详述
+Day06_practice_01.py
+10. __slots__魔法, 静态方法 @staticmethod  和   @classmethod
+Day06_practice_02,03，04
+11. 封装，继承，多态，重写（override），魔法方法，访问器/修改器/删除器，@abstractmethod
+Day06_practice_06，07，08，09
+12. 运算符重载，多重继承
+Day06_practice_06 10，11，12
+
+13. python操作文件和异常 + 正则表达式
+Day08  Day09
+14. Python并发编程，多进程，多线程，多进程+多线程，协程，单线程+异步io，锁
+Day10 
+15. 网络编程+网络应用开发
+Day11
+16. python操作图像与办公文档：
+Day12
+17. 
+函数的高级用法 - “一等公民” / 高阶函数 / Lambda函数 / 作用域和闭包 / 装饰器
+面向对象高级知识 - “三大支柱” / 类与类之间的关系 / 垃圾回收 / 魔术属性和方法 / 混入 / 元类 / 面向对象设计原则 / GoF设计模式
+迭代器和生成器 - 相关魔术方法 / 创建生成器的两种方式 /
+并发和异步编程 - 多线程 / 多进程 / 异步IO / async和await
+
+18:“”.join,random模块，string模块
+
+Day16——Day20
+
+18. 请简述Mysql增删查改，事务，锁，操作，读写分离，索引，范式，分表等面试常见问题
+19. 请简述linux常用命令，docker，k8s集群管理
+20. 请操作框架Django，DRF，FastAPI，RESTFUL，Flask等
+21. 请简述深度学习与人工智能
+22. 请简述数据分析，Numpy，Pandas，数据可视化等
+23. 请简述python自动化测试
+24. 请简述爬虫与scrapy框架
+25. 请简述前端学习路线，以及操作html，css，js，ts，webpack，nodejs，jquery，Bootstrap，Echarts，Vue等
+26. 请简述kafuka,redis,mongodb等
+
+
