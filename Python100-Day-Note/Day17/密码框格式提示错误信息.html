@@ -1,0 +1,64 @@
+<!--
+    用户如果离开密码框，里面输入个数不是6~16,则提示错误信息，否则提示输入正确信息
+
+案例分析
+
+①首先判断的事件是表单失去焦点onblur
+
+②如果输入正确则提示正确的信息颜色为绿色小图标变化
+
+③如果输入不是6到16位，则提示错误信息颜色为红色小图标变化
+
+④因为里面变化样式较多，我们采取className修改样式
+-->
+<style>
+    div {
+        width: 600px;
+        margin: 100px auto;
+    }
+
+    .message {
+        display: inline-block;
+        font-size: 12px;
+        color: #999;
+        background: url(images/icon/tishi.png) no-repeat left center;
+        padding-left: 20px;
+
+    }
+
+    .wrong {
+        color: red;
+        background-image: url(images/icon/cuowutishitianchong.png)
+    }
+
+    .right {
+        color: green;
+        background-image: url(images/icon/zhengquetishitianchong.png);
+    }
+</style>
+
+<div class="register">
+    <input type="password" class='ipt'>
+    <p class="message">请输入6~16位密码</p>
+    <script>
+        // ①首先判断的事件是表单失去焦点onblur
+        // ②如果输入正确则提示正确的信息颜色为绿色小图标变化
+        // ③如果输入不是6到16位，则提示错误信息颜色为红色小图标变化
+        // ④因为里面变化样式较多，我们采取className修改样式
+        //  1.获取元素
+        var ipt = document.querySelector('.ipt');
+        var message = document.querySelector('.message');
+        // 2.注册事件 失去焦点
+        ipt.onblur = function () {
+            // 根据表单里面值的长度 ipt.value.length
+            if (this.value.length < 6 || this.value.length > 16) {
+                // console.log('错误');
+                message.className = 'message wrong';
+                message.innerHTML = '您输入的位数不对 要求6~16位';
+            } else {
+                message.className = 'message right';
+                message.innerHTML = '您输入正确';
+            }
+        }
+    </script>
+</div>

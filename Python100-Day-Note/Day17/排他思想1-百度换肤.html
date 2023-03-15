@@ -1,0 +1,19 @@
+<!--
+    案例分析：
+①这个案例练习的是给一组元素注册事件。
+②给4个小图片利用循环注册点击事件
+③当我们点击了这个图片，让我们页面背景改为当前的图片
+④核心算法：当把当前图片的src路径取过来，给body作为背景即可
+-->
+<script>
+    // 1.获取元素
+    var imgs = document.querySelector('.baidu').querySelectorAll('img');
+    // 2.循环注册事件
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            // this.src 就是我们点击图片的路径 images/2.jpg
+            // 把这个路径 this.src 给body 就可以了
+            document.body.style.backgroundImage = 'url(' + this.src + ')';
+        }
+    }
+</script>

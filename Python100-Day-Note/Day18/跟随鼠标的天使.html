@@ -1,0 +1,31 @@
+<!--
+①鼠标不断的移动，使鼠标移动事件：mousemove
+
+②在页面中移动，给document注册事件
+
+③图片要移动距离，而且不占位置，我们使用绝对定位即可
+
+④核心原理︰每次鼠标移动，我们都会获得最新的鼠标坐标，把这个x和y坐标做为图片的top和left值就可以移动图片
+-->
+
+<style>
+    img {
+        position: absolute;
+    }
+</style>
+<body>
+<img src="../images/20220915185630.gif" alt="">
+<script>
+    var pic = document.querySelector('img');
+    document.addEventListener('mousemove', function (e) {
+        // 1. mousemove只要我们鼠标移动1px就会触发这个事件 
+        // console.log(1);
+        //⒉.核心原理:每次鼠标移动，我们都会获得最新的鼠标坐标，把这个x和y坐标做为图片的top和left值就可以移动图片
+        var x = e.pageX;
+        var y = e.pageY;
+        console.log('x坐标是' + x, 'y坐标是' + y);
+        pic.style.left = x - 50 + 'px';  //50是图片大小的一半
+        pic.style.top = y - 50 + 'px';  //使鼠标可以居中在图片上
+    })
+</script>
+</body>

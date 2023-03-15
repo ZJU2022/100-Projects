@@ -1,0 +1,22 @@
+ul {
+    width: 190px;
+    height: 470px;
+    overflow: hidden;
+    background-color: #F4F4F4;
+}
+
+ul>li img{
+    /* 
+		这里其实只调整高度即可，因为我们下载的图片宽高比跟F12中调试的是一致的
+		而且一般情况下，不会固定或修改图片在网页中显示的宽高比
+		因为如果我们随意调整css中的宽高比，会导致图片变形 
+    	这里任意只调整高度或宽度，图片可以保持原比例大小
+    */
+    /* width: 190px; */
+    height: 150px;
+    width:100%
+}
+#我们在调整布局结构的时候，特别是设置外边距，一般是设置块元素的，而不建议去调整行内元素或行内块元素
+ul>li:not(:last-child){
+    margin-bottom: 10px;
+}

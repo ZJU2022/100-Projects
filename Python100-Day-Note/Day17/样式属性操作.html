@@ -1,0 +1,22 @@
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div></div>
+<script>
+    // 1.获取元素
+    var div = document.querySelector('div');
+    // 2.注册事件 处理程序
+    div.onclick = function(){
+        this.style.backgroundColor = 'purple'; 
+        this.style.width = '2500px';
+
+    }
+    
+</script>
+</body>

@@ -1,0 +1,18 @@
+<!--
+    案例：下拉菜单
+-->
+<script>
+    // 1.获取元素
+    var nav = document.querySelector('.nav');
+    var lis = nav.children; //得到4个小li
+    // 2.循环注册
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.children[1].style.display = 'block';
+        }
+        lis[i].onmouseout = function () {
+            this.children[1].style.display = 'none';
+        }
+    }
+</script>
+

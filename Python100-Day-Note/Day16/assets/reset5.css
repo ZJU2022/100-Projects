@@ -1,0 +1,38 @@
+/* 去除默认样式 */
+a {
+    text-decoration: none;
+}
+
+/* ul整体布局 */
+.menu {
+    width: 1211px;
+    height: 48px;
+    background-color: #E8E7E3;
+    margin: 100px auto;
+}
+
+/* li整体布局 */
+.nav {
+    /* 浮动li元素 */
+    float: left;
+    width: 173px;
+    line-height: 48px;
+}
+
+.nav a {
+    /* 注意点：升级为块元素，使之继承父类宽高
+    否则鼠标悬浮在li元素上时，鼠标“箭头”不会进入a元素变成“小手” */
+    display: block;
+    /* 内容水平居中 */
+    text-align: center;
+    /* 字体样式 */
+    font-size: 14px;
+    color: #777777;
+    font-family: Verdana, Arial, '微软雅黑', '宋体';
+}
+
+/* 超链接悬浮效果 */
+.nav a:hover {
+    background-color: #3F3F3F;
+    color: #E8E7E3;
+}

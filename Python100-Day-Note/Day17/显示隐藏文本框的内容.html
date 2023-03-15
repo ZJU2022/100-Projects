@@ -1,0 +1,46 @@
+<!--
+案例∶显示隐藏文本框内容
+当鼠标点击文本框时，里面的默认文字隐藏，当鼠标离开文本框时，里面的文字显示。
+
+案例分析
+
+①首先表单需要2个新事件，获得焦点onfocus失去焦点onblur
+
+②如果获得焦点，判断表单里面内容是否为默认文字，如果是默认文字，就清空表单内容
+
+③如果失去焦点，判断表单内容是否为空，如果为空，则表单内容改为默认文字
+-->
+
+<style>
+    input {
+        color: #999;
+    }
+</style>
+
+<input type="text" value="手机">
+<script>
+    // 1.获取元素
+    var text = document.querySelector('input')
+    // 2.注册事件 获得焦点事件  onfocus
+    text.onfocus = function(){
+        console.log('得到了焦点');
+        if (this.value == '手机'){
+            this.value = '';
+        }
+        // 获得焦点 需要把文本框里面的文字变黑
+        this.style.color = '#333';
+    }
+         
+    // 3.注册事件 失去焦点事件 onblur
+    text.onblur = function(){
+        console.log('失去了焦点');
+        if (this.value == ''){
+            this.value = '手机';
+        }
+        // 失去焦点 需要把文本框里面的文字变浅
+        this.style.color = '#999';
+    }
+    
+    
+        
+</script>

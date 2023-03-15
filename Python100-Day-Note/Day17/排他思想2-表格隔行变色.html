@@ -1,0 +1,22 @@
+<!--
+    案例分析：
+①用到新的鼠标事件 鼠标经过onmouseover 鼠标离开 onmouseout
+②核心思路：鼠标经过tr行，当前的行变背景颜色，鼠标离开去掉当前的背景颜色
+③注意：第一行thead 不需要变换颜色，因此我们获取的是tbody里面的行
+-->
+
+<script>
+    // 1.获取元素，获取的是tbody里面的所有的行
+    var trs = document.querySelector('tbody').querySelectorAll('tr');
+    // 利用循环绑定注册事件
+    for (var i = 0; i < trs.length; i++) {
+        // 3.鼠标经过实践 onmouseover
+        trs[i].onmouseover = function () {
+            this.className = 'bg';
+        }
+        // 4.鼠标离开实践 onmouseout
+        trs[i].onmouseout = function () {
+            this.className = '';
+        }
+    }
+</script>

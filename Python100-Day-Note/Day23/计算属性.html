@@ -1,0 +1,34 @@
+<!--
+    计算属性关键词: computed。
+
+计算属性在处理一些复杂逻辑时是很有用的。
+
+可以看下以下反转字符串的例子：
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  {{ message.split('').reverse().join('') }}
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  }
+})
+</script>
+</body>
+</html>
+
+<!--
+    
+-->

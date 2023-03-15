@@ -1,0 +1,63 @@
+<!-- 
+    addEventListener 事件监听方式
+    eventTarget.addEventListener()方法将指定的监听器注册到eventTarget(目标对象）上，当该对象触发指定的事件时，就会执行事件处理函数。
+该方法接收三个参数︰
+
+type:事件类型字符串，比如click、mouseover，注意这里不要带on
+listener:事件处理函数，事件发生时，会调用该监听函数
+useCapture:可选参数，是一个布尔值，默认是false。学完DOM事件流后，我们再进一步学习
+
+
+-->
+eventTarget.addEventListener(type,listener[,usecapture] )
+
+<!--
+    attachEvent事件监听方式 （IE9以上才兼容）
+    eventTarget.attachEvent ()方法将指定的监听器注册到eventTarget(目标对象）上，当该对象触发指定的事件时，指定的回调函数就会被执行。
+
+该方法接收两个参数︰
+
+eventNameWithOn:事件类型字符串，比如onclick、onmouseover ，这里要带
+oncallback:事件处理函教，当目标触发事件时回调函数被调用
+-->
+eventTarget.attachEvent (eventNamewithon,callback)
+
+<!--
+    注册事件兼容性解决方案
+-->
+function addEventListener (element,eventName,fn) {
+    // 判断当前浏览器是否支持addEventListener方法
+        if (element.addEventListener) {
+            element.addEventListener(eventName,fn); //第三个参数默认是false
+        } else if (element.attachEvent) {
+            element.attachEvent ( 'on' + eventName, fn) ;
+        }else {
+        //相当于element.onclick = fn;
+         element [ 'on' + eventName] = fn;
+    }
+    
+<!--
+    删除事件兼容性解决方案
+    传统注册方式
+
+eventTarget.onclick = null;
+
+2.方法监听注册方式
+
+eventTarget.removeEventListener(type，listener [,usecapture] ) ;
+
+eventTarget.detachEvent (eventNamewithon,callback) ;
+
+
+-->    
+function removeEventListener(element,eventName，fn) {
+    //判断当前浏览器是否支持removeEventListener方法
+        if (element.removeEventListener) {
+            element.removeEventListener(eventName，fn); //第三个参数默认是false
+        }else if (element .detachEvent) {
+    element.detachEvent ( 'on' + eventName, fn) ;} else {
+    element [ 'on' + eventName] = null;
+    }
+    
+
+    
