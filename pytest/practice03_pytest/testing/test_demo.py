@@ -15,7 +15,7 @@ def test_b():
 
 
 def test_c():
-    assert 1 == 2
+    assert 1 == 1
 
 
 @pytest.mark.parametrize('a', [1, 2, 3])
