@@ -11,3 +11,5 @@ test runner:用来执行测试用例或者测试套件的
 所有的单元测试框架都是这个结构，pytest框架结构看ppt
 
 参数化：重要。
+
+pytest插件使用指南：https://pypi.org/（直接搜索插件，比如pytest-ordering，然后可以进入GIthub看README的使用指南），看__init__.py，里面记录核心代码

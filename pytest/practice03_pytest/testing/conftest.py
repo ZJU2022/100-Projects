@@ -39,7 +39,7 @@ def get_calc():
     calc = Calculator()
     return calc
 
-
+#钩子函数，https://docs.pytest.org/en/latest/_modules/_pytest/hookspec.html 
 def pytest_collection_modifyitems(
     session: "Session", config: "Config", items: List["Item"]
 ) -> None:

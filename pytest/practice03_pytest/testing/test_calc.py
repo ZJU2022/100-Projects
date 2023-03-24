@@ -52,6 +52,7 @@ class TestCalc:
         "a, b, expect",
          add_datas, ids=myid
      )
+    #pytest test_calc.py -k add就只运行标签为add的case，通过标签来选择执行测试用例
     @pytest.mark.add  #pytest.ini定义了mark有add，加法
     def test_add(self, a, b, expect): # def test_add(self,get_calc, a, b, expect):
         #calc = Calculator()
@@ -84,7 +85,8 @@ class TestCalc:
     @pytest.mark.div
     def test_div(self):
         print("test_div")
-
+        
+    @pytest.mark.run(order=1)
     @pytest.mark.sub
     def test_sub(self):
         print("test_sub")
